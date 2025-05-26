@@ -40,11 +40,11 @@ def analyzed_upload():
     
     #List and handle changes for uploaded archieves
     if st.session_state.analyzed_csv_files:
-        file_name = st.selectbox('Uploaded archieves', st.session_state.analyzed_csv_files.keys())
+        file_name = st.selectbox('Uploaded archives', st.session_state.analyzed_csv_files.keys())
         st.dataframe(st.session_state.analyzed_csv_files[file_name])
 
         if(st.button('Remove file')):
             del st.session_state.analyzed_csv_files[file_name]
     
     else:
-        st.info('No csv archieve')
+        st.info('No csv archive')
